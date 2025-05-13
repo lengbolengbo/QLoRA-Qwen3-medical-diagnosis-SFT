@@ -18,8 +18,14 @@ python data.py
 
 ## 训练
 
+全参数微调
 ```bash
 python train.py
+```
+
+LoRA微调
+```bash
+python train_lora.py
 ```
 
 SwanLab训练日志：[![](https://raw.githubusercontent.com/SwanHubX/assets/main/badge1.svg)](https://swanlab.cn/@ZeyiLin/qwen3-sft-medical/overview)
