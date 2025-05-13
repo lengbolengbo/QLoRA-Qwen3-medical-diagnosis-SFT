@@ -1,5 +1,6 @@
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
+from peft import PeftModel
 
 def predict(messages, model, tokenizer):
     device = "cuda"
@@ -15,8 +16,11 @@ def predict(messages, model, tokenizer):
 
 
 # 加载原下载路径的tokenizer和model
-tokenizer = AutoTokenizer.from_pretrained("./output/Qwen3-1.7B/checkpoint-1082", use_fast=False, trust_remote_code=True)
-model = AutoModelForCausalLM.from_pretrained("./output/Qwen3-1.7B/checkpoint-1082", device_map="auto", torch_dtype=torch.bfloat16)
+tokenizer = AutoTokenizer.from_pretrained("./Qwen/Qwen3-1.7B", use_fast=False, trust_remote_code=True)
+model = AutoModelForCausalLM.from_pretrained("./Qwen/Qwen3-1.7B", device_map="auto", torch_dtype=torch.bfloat16)
+
+# 加载lora模型
+model = PeftModel.from_pretrained(model, model_id="./output/Qwen3-1.7B/checkpoint-1082")
 
 test_texts = {
     'instruction': "你是一个医学专家，你需要根据用户的问题，给出带有思考的回答。",
