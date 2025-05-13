@@ -2,7 +2,11 @@
 
 [![](https://raw.githubusercontent.com/SwanHubX/assets/main/badge1.svg)](https://swanlab.cn/@ZeyiLin/qwen3-sft-medical/overview)
 
-算力要求：32GB显存
+算力要求：
+- 全参数微调：32GB显存
+- LoRA微调：28GB显存
+
+> 如果需要进一步降低显存需求，可以使用Qwen3-0.6B模型，或调低`MAX_LENGTH`。
 
 ## 安装环境
 
