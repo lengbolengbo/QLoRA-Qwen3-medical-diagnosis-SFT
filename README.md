@@ -20,6 +20,8 @@ pip install -r requirements.txt
 
 ## 数据准备
 
+会自动完成数据集下载、预处理、验证集划分，生成`train.jsonl`和`val.jsonl`文件。
+
 ```bash
 python data.py
 ```
