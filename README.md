@@ -80,3 +80,9 @@ python inference.py
 ```bash
 python inference_lora.py
 ```
+
+## 相关工具
+
+- [swanlab](https://github.com/SwanHubX/SwanLab)：开源、现代化设计的深度学习训练跟踪与可视化工具
+- [transformers](https://github.com/huggingface/transformers)：HuggingFace推出的包含预训练文本、计算机视觉、音频、视频和多模态模型的库，用于推理和训练
+- [peft](https://github.com/huggingface/peft)：用于高效微调大型语言模型的库
