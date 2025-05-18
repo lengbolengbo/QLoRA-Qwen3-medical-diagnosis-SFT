@@ -2,7 +2,12 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 def predict(messages, model, tokenizer):
-    device = "cuda"
+    if torch.backends.mps.is_available():
+        device = "mps"
+    elif torch.cuda.is_available():
+        device = "cuda"
+    else:
+        device = "cpu"
 
     text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
     model_inputs = tokenizer([text], return_tensors="pt").to(device)
@@ -15,8 +20,8 @@ def predict(messages, model, tokenizer):
 
 
 # 加载原下载路径的tokenizer和model
-tokenizer = AutoTokenizer.from_pretrained("./output/Qwen3-1.7B/checkpoint-1082", use_fast=False, trust_remote_code=True)
-model = AutoModelForCausalLM.from_pretrained("./output/Qwen3-1.7B/checkpoint-1082", device_map="auto", torch_dtype=torch.bfloat16)
+tokenizer = AutoTokenizer.from_pretrained("./qwen3-sft-medical-model", use_fast=False, trust_remote_code=True)
+model = AutoModelForCausalLM.from_pretrained("./qwen3-sft-medical-model", device_map="auto", torch_dtype=torch.bfloat16)
 
 test_texts = {
     'instruction': "你是一个医学专家，你需要根据用户的问题，给出带有思考的回答。",
