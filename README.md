@@ -1,9 +1,12 @@
 # Qwen3微调实战：医疗R1推理风格聊天 
 
+[English](README_EN.md)
+
 [![](https://raw.githubusercontent.com/SwanHubX/assets/main/badge1.svg)](https://swanlab.cn/@ZeyiLin/qwen3-sft-medical/overview)
 
 - **模型**：[Qwen3-1.7B](https://modelscope.cn/models/Qwen/Qwen3-1.7B/summary)
 - **数据集**：[delicate_medical_r1_data](https://modelscope.cn/datasets/krisfu/delicate_medical_r1_data)
+- **SwanLab**：[qwen3-sft-medical](https://swanlab.cn/@ZeyiLin/qwen3-sft-medical/runs/agps0dkifth5l1xytcdyk/chart)
 - **微调方式**：全参数微调、LoRA微调
 - **推理风格**：R1推理风格
 - **算力要求**：
