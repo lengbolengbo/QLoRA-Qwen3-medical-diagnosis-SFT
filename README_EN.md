@@ -4,7 +4,8 @@
 
 [![](https://raw.githubusercontent.com/SwanHubX/assets/main/badge1.svg)](https://swanlab.cn/@ZeyiLin/qwen3-sft-medical/overview)
 
-- **Model:** [Qwen3-1.7B](https://modelscope.cn/models/Qwen/Qwen3-1.7B/summary)
+- **Base Model:** [Qwen3-1.7B](https://modelscope.cn/models/Qwen/Qwen3-1.7B/summary)
+- **Fine-tuned Model:** [Qwen3-1.7b-Medical-R1-sft](https://modelscope.cn/models/testUser/Qwen3-1.7b-Medical-R1-sft/summary)
 - **Dataset:** [delicate_medical_r1_data](https://modelscope.cn/datasets/krisfu/delicate_medical_r1_data)
 - **SwanLab**：[qwen3-sft-medical](https://swanlab.cn/@ZeyiLin/qwen3-sft-medical/runs/agps0dkifth5l1xytcdyk/chart)
 - **Fine-tuning Methods:** Full-parameter Fine-tuning, LoRA Fine-tuning
