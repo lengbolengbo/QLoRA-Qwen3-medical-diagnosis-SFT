@@ -14,6 +14,7 @@
   - **全参数微调**：32GB显存
   - **LoRA微调**：28GB显存
 - **图文教程**：[Qwen3大模型微调入门实战（完整代码）](https://zhuanlan.zhihu.com/p/1903848838214705484)
+- **Jupyter Notebook**：[train.ipynb](train.ipynb)
 
 > 如果需要进一步降低显存需求，可以使用Qwen3-0.6B模型，或调低`MAX_LENGTH`。
 
