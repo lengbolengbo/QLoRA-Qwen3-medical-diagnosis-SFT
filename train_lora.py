@@ -3,8 +3,8 @@ import pandas as pd
 import torch
 from datasets import Dataset
 from modelscope import snapshot_download, AutoTokenizer
-from transformers import AutoModelForCausalLM, TrainingArguments, Trainer, DataCollatorForSeq2Seq
-from peft import LoraConfig, TaskType, get_peft_model
+from transformers import AutoModelForCausalLM, TrainingArguments, Trainer, DataCollatorForSeq2Seq, BitsAndBytesConfig  # 添加量化配置
+from peft import LoraConfig, TaskType, get_peft_model, prepare_model_for_kbit_training  # 添加k位训练准备
 import os
 import swanlab
 
@@ -16,6 +16,7 @@ swanlab.config.update({
     "model": "Qwen/Qwen3-1.7B",
     "prompt": PROMPT,
     "data_max_length": MAX_LENGTH,
+    "quantization": "4-bit QLoRA"  # 添加量化标识
     })
 
 def dataset_jsonl_transfer(origin_path, new_path):
@@ -25,7 +26,7 @@ def dataset_jsonl_transfer(origin_path, new_path):
     messages = []
 
     # 读取旧的JSONL文件
-    with open(origin_path, "r") as file:
+    with open(origin_path, "r", encoding="utf-8") as file:
         for line in file:
             # 解析每一行的json数据
             data = json.loads(line)
@@ -89,25 +90,46 @@ def predict(messages, model, tokenizer):
 
     return response
 
-# 在modelscope上下载Qwen模型到本地目录下
-model_dir = snapshot_download("Qwen/Qwen3-1.7B", cache_dir="./", revision="master")
+# # 在modelscope上下载Qwen模型到本地目录下
+# model_dir = snapshot_download("Qwen/Qwen3-1.7B", cache_dir="./", revision="master")
+
+# 4-bit量化配置 - 核心修改
+bnb_config = BitsAndBytesConfig(
+    load_in_4bit=True,                 # 启用4位量化
+    bnb_4bit_quant_type="nf4",         # 使用nf4量化类型
+    bnb_4bit_compute_dtype=torch.bfloat16,  # 计算时使用bfloat16
+    bnb_4bit_use_double_quant=True,    # 启用双重量化进一步压缩
+)
 
 # Transformers加载模型权重
-tokenizer = AutoTokenizer.from_pretrained("./Qwen/Qwen3-1.7B", use_fast=False, trust_remote_code=True)
-model = AutoModelForCausalLM.from_pretrained("./Qwen/Qwen3-1.7B", device_map="auto", torch_dtype=torch.bfloat16)
+# 将相对路径转换为绝对路径
+local_model_path = os.path.abspath("./Qwen/Qwen3-1___7B")
+
+tokenizer = AutoTokenizer.from_pretrained(local_model_path, use_fast=False, trust_remote_code=True)
+model = AutoModelForCausalLM.from_pretrained(
+    local_model_path,  # 使用绝对路径
+    quantization_config=bnb_config,  # 应用量化配置
+    device_map="auto",
+    # torch_dtype=torch.bfloat16,
+    trust_remote_code=True
+)
+
 model.enable_input_require_grads()  # 开启梯度检查点时，要执行该方法
 
-# 配置lora
+# 配置lora - 关键修改
 config = LoraConfig(
     task_type=TaskType.CAUSAL_LM,
     target_modules=["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"],
     inference_mode=False,  # 训练模式
-    r=8,  # Lora 秩
-    lora_alpha=32,  # Lora alaph，具体作用参见 Lora 原理
-    lora_dropout=0.1,  # Dropout 比例
+    r=64,              # 增加秩以提升性能 (原8->64)
+    lora_alpha=16,     # 降低alpha (原32->16)
+    lora_dropout=0.05, # 降低dropout (原0.1->0.05)
+    bias="none"
 )
 
 model = get_peft_model(model, config)
+model.print_trainable_parameters()  # 打印可训练参数数量
+
 
 # 加载、处理数据集和测试集
 train_dataset_path = "train.jsonl"
@@ -133,19 +155,24 @@ eval_dataset = eval_ds.map(process_func, remove_columns=eval_ds.column_names)
 
 args = TrainingArguments(
     output_dir="./output/Qwen3-1.7B",
-    per_device_train_batch_size=1,
-    per_device_eval_batch_size=1,
-    gradient_accumulation_steps=4,
+    per_device_train_batch_size=4,      # 增加batch size (原1->4)
+    per_device_eval_batch_size=1,       # 增加eval batch size(原1->2)
+    gradient_accumulation_steps=4,      # 减少梯度累积步数 (原4->2)
+    optim="paged_adamw_8bit",           # 使用8bit优化器节省显存
     eval_strategy="steps",
     eval_steps=100,
     logging_steps=10,
-    num_train_epochs=2,
+    num_train_epochs=3,                 # 增加训练轮次（原2->3）
+    save_strategy="steps",
     save_steps=400,
-    learning_rate=1e-4,
+    learning_rate=2e-4,                 # 提高学习率 (原1e-4->2e-4)
     save_on_each_node=True,
-    gradient_checkpointing=True,
+    gradient_checkpointing=True,        # 确保启用梯度检查点
     report_to="swanlab",
-    run_name="qwen3-1.7B",
+    run_name="qwen3-1.7B-QLoRA",
+    fp16=True,                          # 启用FP16混合精度
+    max_grad_norm=0.3,                  # 梯度裁剪防止梯度爆炸
+    logging_dir='./logs',               # 添加日志目录
 )
 
 trainer = Trainer(
@@ -153,10 +180,20 @@ trainer = Trainer(
     args=args,
     train_dataset=train_dataset,
     eval_dataset=eval_dataset,
-    data_collator=DataCollatorForSeq2Seq(tokenizer=tokenizer, padding=True),
+    data_collator=DataCollatorForSeq2Seq(
+        tokenizer=tokenizer,
+        padding=True,
+        pad_to_multiple_of=8  # 填充到8的倍数提升效率
+    ),
 )
 
+# 训练前检查显存
+print(f"训练前显存使用: {torch.cuda.memory_allocated()/1024**3:.2f} GB")
 trainer.train()
+
+# 仅保存适配器权重
+model.save_pretrained(args.output_dir)
+print(f"QLoRA适配器权重已保存至 {args.output_dir}")
 
 # 用测试集的前3条，主观看模型
 test_df = pd.read_json(test_jsonl_new_path, lines=True)[:3]

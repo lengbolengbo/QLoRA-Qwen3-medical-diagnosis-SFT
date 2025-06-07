@@ -1,0 +1,40 @@
+v1：本地运行成功，较原版，这里有什么区别，后面写
+v2：
+- 关于参数：
+TrainingArguments中增加一下两个参数——余弦衰减代替线性衰减
+(
+ lr_scheduler_type="cosine",         ## 学习率调整（余弦衰减代替线性衰减）
+    warmup_ratio=0.1,                ## 10%训练步数作为预
+)
+LoraConfig新增——增加正则化强度
+(
+    lora_dropout=0.1,  # 改为原来的0.1
+    modules_to_save=["embed_tokens", "lm_head"],  # 适配嵌入层和输出层
+)
+v3：
+- 数据增强：在process_func中添加随机掩码:
+1. 临床实用性：处理不完整描述的能力提升（ 提升上下文推理能力（核心价值））
+2. 知识鲁棒性：术语变体理解更准确
+3. 诊断深度：思考链更完整系统
+4. 泛化能力：适应未见病例的能力增强
+process_func中进行修改：
+    # 医学关键术语掩码增强（10%概率触发）---- 精选12个核心医学术语，覆盖诊断、治疗、药物等关键场景
+    output_text = example['output']
+    if random.random() < 0.1:  # 10%的样本进行增强
+        medical_terms = ["症状", "诊断", "治疗", "病因", "预防", "并发症",
+                        "药物", "剂量", "手术", "检查", "病理", "临床"]
+         # # 随机选择1-2个术语进行掩码
+            # # 三种掩码模式随机选择：
+            # # [MASK]：通用掩码标识
+            # # [SYMPTOM]：术语类型提示（如[症状]）
+        for _ in range(random.randint(1, 2)):
+            term = random.choice(medical_terms)
+            mask_type = random.choice(["[MASK]", f"[{term.upper()}]", "..."])
+            # # 只替换第一个出现位置：
+            # # 仅替换术语的首次出现，保持上下文完整性
+            # # 每次增强处理1-2个术语（避免信息过度损失）
+            output_text = output_text.replace(term, mask_type, 1)
+
+    # 构建模型输入
+    ……
+    response = tokenizer(f"{output_text}", add_special_tokens=False)  # 使用增强后的输出

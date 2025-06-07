@@ -1,3 +1,4 @@
+import os
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import PeftModel
@@ -21,15 +22,22 @@ def predict(messages, model, tokenizer):
 
 
 # 加载原下载路径的tokenizer和model
-tokenizer = AutoTokenizer.from_pretrained("./Qwen/Qwen3-1.7B", use_fast=False, trust_remote_code=True)
-model = AutoModelForCausalLM.from_pretrained("./Qwen/Qwen3-1.7B", device_map="auto", torch_dtype=torch.bfloat16)
+local_model_path = os.path.abspath("./Qwen/Qwen3-1___7B")
+tokenizer = AutoTokenizer.from_pretrained(local_model_path, use_fast=False, trust_remote_code=True)
+model = AutoModelForCausalLM.from_pretrained(local_model_path, device_map="auto", torch_dtype=torch.bfloat16)
 
 # 加载lora模型
-model = PeftModel.from_pretrained(model, model_id="./output/Qwen3-1.7B/checkpoint-1082")
+# model = PeftModel.from_pretrained(model, model_id="./output/Qwen3-1.7B-v2/checkpoint-400")
+model = PeftModel.from_pretrained(model, model_id="./output/Qwen3-1.7B-v3/checkpoint-400")
+
+# test_texts = {
+#     'instruction': "你是一个医学专家，你需要根据用户的问题，给出带有思考的回答。",
+#     'input': "医生，我最近被诊断为糖尿病，听说碳水化合物的选择很重要，我应该选择什么样的碳水化合物呢？"
+# }
 
 test_texts = {
     'instruction': "你是一个医学专家，你需要根据用户的问题，给出带有思考的回答。",
-    'input': "医生，我最近被诊断为糖尿病，听说碳水化合物的选择很重要，我应该选择什么样的碳水化合物呢？"
+    'input': "医生，我爸爸75岁了，最近查出有高血压，降压时会需要考虑哪些方面？"
 }
 
 instruction = test_texts['instruction']
