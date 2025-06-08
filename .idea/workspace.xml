@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d33e5d2f-d446-4e88-9687-fc095eba9cf6" name="更改" comment="初次推送">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Qwen/Qwen3-1___7B/model-00001-of-00002.safetensors" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Qwen/Qwen3-1___7B/model-00002-of-00002.safetensors" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Qwen/Qwen3-1___7B/vocab.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B-v2/checkpoint-400/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B-v2/checkpoint-400/adapter_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B-v2/checkpoint-400/adapter_model.safetensors" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B-v2/checkpoint-400/added_tokens.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B-v2/checkpoint-400/chat_template.jinja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B-v2/checkpoint-400/merges.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B-v2/checkpoint-400/optimizer.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B-v2/checkpoint-400/special_tokens_map.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B-v2/checkpoint-400/tokenizer_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B-v2/checkpoint-400/training_args.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B-v2/checkpoint-400/vocab.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B-v3/checkpoint-400/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B-v3/checkpoint-400/adapter_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B-v3/checkpoint-400/adapter_model.safetensors" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B-v3/checkpoint-400/added_tokens.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B-v3/checkpoint-400/chat_template.jinja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B-v3/checkpoint-400/merges.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B-v3/checkpoint-400/optimizer.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B-v3/checkpoint-400/special_tokens_map.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B-v3/checkpoint-400/tokenizer_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B-v3/checkpoint-400/training_args.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B-v3/checkpoint-400/vocab.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B/checkpoint-400/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B/checkpoint-400/adapter_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B/checkpoint-400/adapter_model.safetensors" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B/checkpoint-400/added_tokens.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B/checkpoint-400/chat_template.jinja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B/checkpoint-400/merges.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B/checkpoint-400/optimizer.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B/checkpoint-400/special_tokens_map.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B/checkpoint-400/tokenizer_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B/checkpoint-400/training_args.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Qwen3-1.7B/checkpoint-400/vocab.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250605_144317-a3b1799d/console/2025-06-05.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250605_144317-a3b1799d/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250605_144317-a3b1799d/files/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250605_144317-a3b1799d/files/swanlab-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250605_144317-a3b1799d/logs/10/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250605_144317-a3b1799d/logs/10/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250605_144317-a3b1799d/logs/11/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250605_144317-a3b1799d/logs/11/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250605_144317-a3b1799d/logs/12/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250605_144317-a3b1799d/logs/12/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250605_144317-a3b1799d/logs/13/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250605_144317-a3b1799d/logs/13/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250605_144317-a3b1799d/logs/14/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250605_144317-a3b1799d/logs/14/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250605_144317-a3b1799d/logs/15/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250605_144317-a3b1799d/logs/15/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250605_144317-a3b1799d/logs/16/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250605_144317-a3b1799d/logs/16/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250605_144317-a3b1799d/logs/17/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250605_144317-a3b1799d/logs/17/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250605_144317-a3b1799d/logs/18/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250605_144317-a3b1799d/logs/18/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_004316-a3b1799d/console/2025-06-06.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_004316-a3b1799d/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_004316-a3b1799d/files/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_004316-a3b1799d/files/swanlab-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_004316-a3b1799d/logs/10/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_004316-a3b1799d/logs/10/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_004316-a3b1799d/logs/11/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_004316-a3b1799d/logs/11/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_004316-a3b1799d/logs/12/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_004316-a3b1799d/logs/12/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_004316-a3b1799d/logs/13/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_004316-a3b1799d/logs/13/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_004316-a3b1799d/logs/14/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_004316-a3b1799d/logs/14/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_004316-a3b1799d/logs/15/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_004316-a3b1799d/logs/15/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_004316-a3b1799d/logs/16/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_004316-a3b1799d/logs/16/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_004316-a3b1799d/logs/17/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_004316-a3b1799d/logs/17/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_004316-a3b1799d/logs/18/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_004316-a3b1799d/logs/18/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_205134-a3b1799d/console/2025-06-06.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_205134-a3b1799d/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_205134-a3b1799d/files/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_205134-a3b1799d/files/swanlab-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_205134-a3b1799d/logs/10/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_205134-a3b1799d/logs/10/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_205134-a3b1799d/logs/11/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_205134-a3b1799d/logs/11/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_205134-a3b1799d/logs/12/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_205134-a3b1799d/logs/12/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_205134-a3b1799d/logs/13/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_205134-a3b1799d/logs/13/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_205134-a3b1799d/logs/14/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_205134-a3b1799d/logs/14/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_205134-a3b1799d/logs/15/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_205134-a3b1799d/logs/15/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_205134-a3b1799d/logs/16/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_205134-a3b1799d/logs/16/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_205134-a3b1799d/logs/17/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_205134-a3b1799d/logs/17/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_205134-a3b1799d/logs/18/1000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/run-20250606_205134-a3b1799d/logs/18/_summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/runs.swanlab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/runs.swanlab-shm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swanlog/runs.swanlab-wal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/train.jsonl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/train_format.jsonl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/val.jsonl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/val_format.jsonl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README_EN.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inference.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train.ipynb" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;lengbolengbo&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/lengbolengbo/QLoRA-Qwen3-medical-diagnosis-SFT.git",
+    "accountId": "951b9ede-291b-4aa0-bcd5-ea43d6128104"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2y4o0t2lnhviG3tlq5OA12ewRj7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.inference_lora.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.train_lora.executor&quot;: &quot;Run&quot;,
+    &quot;Python.train_lora2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.train_lora3.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/QLoRA-Qwen3-medical-diagnosis-SFT&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\Qwen3-Medical-SFT" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-PY-251.25410.122" />
+        <option value="bundled-python-sdk-880ecab49056-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.122" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="d33e5d2f-d446-4e88-9687-fc095eba9cf6" name="更改" comment="" />
+      <created>1749102986189</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1749102986189</updated>
+      <workItem from="1749102987225" duration="5967000" />
+      <workItem from="1749115209804" duration="6482000" />
+      <workItem from="1749168596130" duration="8832000" />
+      <workItem from="1749274059570" duration="40000" />
+      <workItem from="1749274107806" duration="10883000" />
+      <workItem from="1749299521524" duration="22000" />
+      <workItem from="1749299556555" duration="2512000" />
+    </task>
+    <task id="LOCAL-00001" summary="初次推送">
+      <option name="closed" value="true" />
+      <created>1749299614664</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749299614664</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="初次推送" />
+    <option name="LAST_COMMIT_MESSAGE" value="初次推送" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Qwen3_Medical_SFT$train_lora3.coverage" NAME="train_lora3 覆盖结果" MODIFIED="1749214218917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Qwen3_Medical_SFT$test.coverage" NAME="test 覆盖结果" MODIFIED="1749284116260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Qwen3_Medical_SFT$data.coverage" NAME="data 覆盖结果" MODIFIED="1749103557935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Qwen3_Medical_SFT$train_lora2.coverage" NAME="train_lora2 覆盖结果" MODIFIED="1749141734806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Qwen3_Medical_SFT$inference_lora.coverage" NAME="inference_lora 覆盖结果" MODIFIED="1749297577903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Qwen3_Medical_SFT$train_lora.coverage" NAME="train_lora 覆盖结果" MODIFIED="1749105734116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

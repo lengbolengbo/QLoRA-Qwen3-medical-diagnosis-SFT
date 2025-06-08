@@ -1,4 +1,4 @@
-# 基于QLoRA的Qwen3-1.7B医疗问诊R1推理微调工程
+# git branch -M main
 
 
 - **基础模型**：[Qwen3-1.7B](https://modelscope.cn/models/Qwen/Qwen3-1.7B/summary)

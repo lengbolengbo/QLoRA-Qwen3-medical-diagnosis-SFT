@@ -1,0 +1,883 @@
+FRAMEWORK:
+  desc: ''
+  sort: 4
+  value: 🤗transformers
+_name_or_path:
+  desc: ''
+  sort: 78
+  value: D:\Projects\Qwen3-Medical-SFT\Qwen\Qwen3-1___7B
+accelerator_config:
+  desc: ''
+  sort: 160
+  value:
+    dispatch_batches: null
+    even_batches: 1
+    gradient_accumulation_kwargs: null
+    non_blocking: 0
+    split_batches: 0
+    use_seedable_sampler: 1
+adafactor:
+  desc: ''
+  sort: 165
+  value: 0
+adam_beta1:
+  desc: ''
+  sort: 99
+  value: 0.9
+adam_beta2:
+  desc: ''
+  sort: 100
+  value: 0.999
+adam_epsilon:
+  desc: ''
+  sort: 101
+  value: 1.0e-08
+add_cross_attention:
+  desc: ''
+  sort: 38
+  value: 0
+architectures:
+  desc: ''
+  sort: 65
+  value:
+  - Qwen3ForCausalLM
+attention_bias:
+  desc: ''
+  sort: 23
+  value: 0
+attention_dropout:
+  desc: ''
+  sort: 24
+  value: 0.0
+auto_find_batch_size:
+  desc: ''
+  sort: 193
+  value: 0
+average_tokens_across_devices:
+  desc: ''
+  sort: 209
+  value: 0
+bad_words_ids:
+  desc: ''
+  sort: 55
+  value: null
+batch_eval_metrics:
+  desc: ''
+  sort: 205
+  value: 0
+begin_suppress_tokens:
+  desc: ''
+  sort: 64
+  value: null
+bf16:
+  desc: ''
+  sort: 131
+  value: 1
+bf16_full_eval:
+  desc: ''
+  sort: 135
+  value: 0
+bos_token_id:
+  desc: ''
+  sort: 71
+  value: 151643
+chunk_size_feed_forward:
+  desc: ''
+  sort: 34
+  value: 0
+cross_attention_hidden_size:
+  desc: ''
+  sort: 37
+  value: null
+data_max_length:
+  desc: ''
+  sort: 2
+  value: 2048
+data_seed:
+  desc: ''
+  sort: 128
+  value: null
+dataloader_drop_last:
+  desc: ''
+  sort: 143
+  value: 0
+dataloader_num_workers:
+  desc: ''
+  sort: 145
+  value: 0
+dataloader_persistent_workers:
+  desc: ''
+  sort: 173
+  value: 0
+dataloader_pin_memory:
+  desc: ''
+  sort: 172
+  value: 1
+dataloader_prefetch_factor:
+  desc: ''
+  sort: 146
+  value: null
+ddp_backend:
+  desc: ''
+  sort: 139
+  value: null
+ddp_broadcast_buffers:
+  desc: ''
+  sort: 171
+  value: null
+ddp_bucket_cap_mb:
+  desc: ''
+  sort: 170
+  value: null
+ddp_find_unused_parameters:
+  desc: ''
+  sort: 169
+  value: null
+ddp_timeout:
+  desc: ''
+  sort: 197
+  value: 1800
+debug:
+  desc: ''
+  sort: 142
+  value: []
+decoder_start_token_id:
+  desc: ''
+  sort: 75
+  value: null
+deepspeed:
+  desc: ''
+  sort: 161
+  value: null
+disable_tqdm:
+  desc: ''
+  sort: 149
+  value: 0
+diversity_penalty:
+  desc: ''
+  sort: 46
+  value: 0.0
+do_eval:
+  desc: ''
+  sort: 85
+  value: 1
+do_predict:
+  desc: ''
+  sort: 86
+  value: 0
+do_sample:
+  desc: ''
+  sort: 42
+  value: 0
+do_train:
+  desc: ''
+  sort: 84
+  value: 0
+early_stopping:
+  desc: ''
+  sort: 43
+  value: 0
+encoder_no_repeat_ngram_size:
+  desc: ''
+  sort: 54
+  value: 0
+eos_token_id:
+  desc: ''
+  sort: 73
+  value: 151645
+eval_accumulation_steps:
+  desc: ''
+  sort: 94
+  value: null
+eval_delay:
+  desc: ''
+  sort: 95
+  value: 0
+eval_do_concat_batches:
+  desc: ''
+  sort: 187
+  value: 1
+eval_on_start:
+  desc: ''
+  sort: 206
+  value: 0
+eval_steps:
+  desc: ''
+  sort: 144
+  value: 100
+eval_strategy:
+  desc: ''
+  sort: 87
+  value: steps
+eval_use_gather_object:
+  desc: ''
+  sort: 208
+  value: 0
+exponential_decay_length_penalty:
+  desc: ''
+  sort: 62
+  value: null
+finetuning_task:
+  desc: ''
+  sort: 66
+  value: null
+forced_bos_token_id:
+  desc: ''
+  sort: 59
+  value: null
+forced_eos_token_id:
+  desc: ''
+  sort: 60
+  value: null
+fp16:
+  desc: ''
+  sort: 132
+  value: 0
+fp16_backend:
+  desc: ''
+  sort: 188
+  value: auto
+fp16_full_eval:
+  desc: ''
+  sort: 136
+  value: 0
+fp16_opt_level:
+  desc: ''
+  sort: 133
+  value: O1
+fsdp:
+  desc: ''
+  sort: 156
+  value: []
+fsdp_config:
+  desc: ''
+  sort: 158
+  value:
+    min_num_params: 0
+    xla: 0
+    xla_fsdp_grad_ckpt: 0
+    xla_fsdp_v2: 0
+fsdp_min_num_params:
+  desc: ''
+  sort: 157
+  value: 0
+fsdp_transformer_layer_cls_to_wrap:
+  desc: ''
+  sort: 159
+  value: null
+full_determinism:
+  desc: ''
+  sort: 194
+  value: 0
+gradient_accumulation_steps:
+  desc: ''
+  sort: 93
+  value: 4
+gradient_checkpointing:
+  desc: ''
+  sort: 183
+  value: 1
+gradient_checkpointing_kwargs:
+  desc: ''
+  sort: 184
+  value: null
+greater_is_better:
+  desc: ''
+  sort: 154
+  value: null
+group_by_length:
+  desc: ''
+  sort: 166
+  value: 0
+half_precision_backend:
+  desc: ''
+  sort: 134
+  value: auto
+head_dim:
+  desc: ''
+  sort: 16
+  value: 128
+hidden_act:
+  desc: ''
+  sort: 17
+  value: silu
+hidden_size:
+  desc: ''
+  sort: 8
+  value: 2048
+hub_always_push:
+  desc: ''
+  sort: 182
+  value: 0
+hub_model_id:
+  desc: ''
+  sort: 178
+  value: null
+hub_private_repo:
+  desc: ''
+  sort: 181
+  value: null
+hub_strategy:
+  desc: ''
+  sort: 179
+  value: every_save
+hub_token:
+  desc: ''
+  sort: 180
+  value: <HUB_TOKEN>
+id2label:
+  desc: ''
+  sort: 67
+  value:
+    '0': LABEL_0
+    '1': LABEL_1
+ignore_data_skip:
+  desc: ''
+  sort: 155
+  value: 0
+include_for_metrics:
+  desc: ''
+  sort: 186
+  value: []
+include_inputs_for_metrics:
+  desc: ''
+  sort: 185
+  value: 0
+include_num_input_tokens_seen:
+  desc: ''
+  sort: 202
+  value: 0
+include_tokens_per_second:
+  desc: ''
+  sort: 201
+  value: 0
+initializer_range:
+  desc: ''
+  sort: 18
+  value: 0.02
+intermediate_size:
+  desc: ''
+  sort: 9
+  value: 6144
+is_decoder:
+  desc: ''
+  sort: 36
+  value: 0
+is_encoder_decoder:
+  desc: ''
+  sort: 35
+  value: 0
+jit_mode_eval:
+  desc: ''
+  sort: 129
+  value: 0
+label2id:
+  desc: ''
+  sort: 68
+  value:
+    LABEL_0: 0
+    LABEL_1: 1
+label_names:
+  desc: ''
+  sort: 151
+  value: null
+label_smoothing_factor:
+  desc: ''
+  sort: 162
+  value: 0.0
+learning_rate:
+  desc: ''
+  sort: 97
+  value: 0.0002
+length_column_name:
+  desc: ''
+  sort: 167
+  value: length
+length_penalty:
+  desc: ''
+  sort: 52
+  value: 1.0
+load_best_model_at_end:
+  desc: ''
+  sort: 152
+  value: 0
+local_rank:
+  desc: ''
+  sort: 138
+  value: 0
+log_level:
+  desc: ''
+  sort: 109
+  value: passive
+log_level_replica:
+  desc: ''
+  sort: 110
+  value: warning
+log_on_each_node:
+  desc: ''
+  sort: 111
+  value: 1
+logging_dir:
+  desc: ''
+  sort: 112
+  value: ./logs
+logging_first_step:
+  desc: ''
+  sort: 114
+  value: 0
+logging_nan_inf_filter:
+  desc: ''
+  sort: 116
+  value: 1
+logging_steps:
+  desc: ''
+  sort: 115
+  value: 10
+logging_strategy:
+  desc: ''
+  sort: 113
+  value: steps
+lr_scheduler_kwargs:
+  desc: ''
+  sort: 106
+  value: {}
+lr_scheduler_type:
+  desc: ''
+  sort: 105
+  value: cosine
+max_grad_norm:
+  desc: ''
+  sort: 102
+  value: 0.3
+max_length:
+  desc: ''
+  sort: 40
+  value: 20
+max_position_embeddings:
+  desc: ''
+  sort: 7
+  value: 40960
+max_steps:
+  desc: ''
+  sort: 104
+  value: -1
+max_window_layers:
+  desc: ''
+  sort: 14
+  value: 28
+metric_for_best_model:
+  desc: ''
+  sort: 153
+  value: null
+min_length:
+  desc: ''
+  sort: 41
+  value: 0
+model:
+  desc: ''
+  sort: 0
+  value: Qwen/Qwen3-1.7B
+model_num_parameters:
+  desc: ''
+  sort: 210
+  value: 2412635136
+model_type:
+  desc: ''
+  sort: 80
+  value: qwen3
+mp_parameters:
+  desc: ''
+  sort: 192
+  value: ''
+neftune_noise_alpha:
+  desc: ''
+  sort: 203
+  value: null
+no_cuda:
+  desc: ''
+  sort: 124
+  value: 0
+no_repeat_ngram_size:
+  desc: ''
+  sort: 53
+  value: 0
+num_attention_heads:
+  desc: ''
+  sort: 11
+  value: 16
+num_beam_groups:
+  desc: ''
+  sort: 45
+  value: 1
+num_beams:
+  desc: ''
+  sort: 44
+  value: 1
+num_hidden_layers:
+  desc: ''
+  sort: 10
+  value: 28
+num_key_value_heads:
+  desc: ''
+  sort: 15
+  value: 8
+num_return_sequences:
+  desc: ''
+  sort: 56
+  value: 1
+num_train_epochs:
+  desc: ''
+  sort: 103
+  value: 3
+optim:
+  desc: ''
+  sort: 163
+  value: paged_adamw_8bit
+optim_args:
+  desc: ''
+  sort: 164
+  value: null
+optim_target_modules:
+  desc: ''
+  sort: 204
+  value: null
+output_attentions:
+  desc: ''
+  sort: 27
+  value: 0
+output_dir:
+  desc: ''
+  sort: 82
+  value: ./output/Qwen3-1.7B-v2
+output_hidden_states:
+  desc: ''
+  sort: 26
+  value: 0
+output_scores:
+  desc: ''
+  sort: 57
+  value: 0
+overwrite_output_dir:
+  desc: ''
+  sort: 83
+  value: 0
+pad_token_id:
+  desc: ''
+  sort: 72
+  value: null
+past_index:
+  desc: ''
+  sort: 147
+  value: -1
+peft_config:
+  desc: ''
+  sort: 5
+  value:
+    default: 'LoraConfig(task_type=<TaskType.CAUSAL_LM: ''CAUSAL_LM''>, peft_type=<PeftType.LORA:
+      ''LORA''>, auto_mapping=None, base_model_name_or_path=''D:\\Projects\\QLoRA-Qwen3-medical-diagnosis-SFT\\Qwen\\Qwen3-1___7B'',
+      revision=None, inference_mode=False, r=64, target_modules={''down_proj'', ''q_proj'',
+      ''up_proj'', ''v_proj'', ''o_proj'', ''k_proj'', ''gate_proj''}, exclude_modules=None,
+      lora_alpha=16, lora_dropout=0.1, fan_in_fan_out=False, bias=''none'', use_rslora=False,
+      modules_to_save=[''embed_tokens'', ''lm_head''], init_lora_weights=True, layers_to_transform=None,
+      layers_pattern=None, rank_pattern={}, alpha_pattern={}, megatron_config=None,
+      megatron_core=''megatron.core'', loftq_config={}, eva_config=None, use_dora=False,
+      layer_replication=None, runtime_config=LoraRuntimeConfig(ephemeral_gpu_offload=False),
+      lora_bias=False)'
+per_device_eval_batch_size:
+  desc: ''
+  sort: 90
+  value: 1
+per_device_train_batch_size:
+  desc: ''
+  sort: 89
+  value: 4
+per_gpu_eval_batch_size:
+  desc: ''
+  sort: 92
+  value: null
+per_gpu_train_batch_size:
+  desc: ''
+  sort: 91
+  value: null
+prediction_loss_only:
+  desc: ''
+  sort: 88
+  value: 0
+prefix:
+  desc: ''
+  sort: 70
+  value: null
+problem_type:
+  desc: ''
+  sort: 77
+  value: null
+prompt:
+  desc: ''
+  sort: 1
+  value: 你是一个医学专家，你需要根据用户的问题，给出带有思考的回答。
+pruned_heads:
+  desc: ''
+  sort: 32
+  value: {}
+push_to_hub:
+  desc: ''
+  sort: 176
+  value: 0
+push_to_hub_model_id:
+  desc: ''
+  sort: 189
+  value: null
+push_to_hub_organization:
+  desc: ''
+  sort: 190
+  value: null
+push_to_hub_token:
+  desc: ''
+  sort: 191
+  value: <PUSH_TO_HUB_TOKEN>
+quantization:
+  desc: ''
+  sort: 3
+  value: 4-bit QLoRA
+quantization_config:
+  desc: ''
+  sort: 81
+  value:
+    _load_in_4bit: 1
+    _load_in_8bit: 0
+    bnb_4bit_compute_dtype: bfloat16
+    bnb_4bit_quant_storage: uint8
+    bnb_4bit_quant_type: nf4
+    bnb_4bit_use_double_quant: 1
+    llm_int8_enable_fp32_cpu_offload: 0
+    llm_int8_has_fp16_weight: 0
+    llm_int8_skip_modules: null
+    llm_int8_threshold: 6.0
+    load_in_4bit: 1
+    load_in_8bit: 0
+    quant_method: QuantizationMethod.BITS_AND_BYTES
+ray_scope:
+  desc: ''
+  sort: 196
+  value: last
+remove_invalid_values:
+  desc: ''
+  sort: 61
+  value: 0
+remove_unused_columns:
+  desc: ''
+  sort: 150
+  value: 1
+repetition_penalty:
+  desc: ''
+  sort: 51
+  value: 1.0
+report_to:
+  desc: ''
+  sort: 168
+  value:
+  - swanlab
+restore_callback_states_from_checkpoint:
+  desc: ''
+  sort: 123
+  value: 0
+resume_from_checkpoint:
+  desc: ''
+  sort: 177
+  value: null
+return_dict:
+  desc: ''
+  sort: 25
+  value: 1
+return_dict_in_generate:
+  desc: ''
+  sort: 58
+  value: 0
+rms_norm_eps:
+  desc: ''
+  sort: 19
+  value: 1.0e-06
+rope_scaling:
+  desc: ''
+  sort: 22
+  value: null
+rope_theta:
+  desc: ''
+  sort: 21
+  value: 1000000
+run_name:
+  desc: ''
+  sort: 148
+  value: qwen3-1.7B-QLoRA-v2
+save_on_each_node:
+  desc: ''
+  sort: 121
+  value: 1
+save_only_model:
+  desc: ''
+  sort: 122
+  value: 0
+save_safetensors:
+  desc: ''
+  sort: 120
+  value: 1
+save_steps:
+  desc: ''
+  sort: 118
+  value: 400
+save_strategy:
+  desc: ''
+  sort: 117
+  value: steps
+save_total_limit:
+  desc: ''
+  sort: 119
+  value: null
+seed:
+  desc: ''
+  sort: 127
+  value: 42
+sep_token_id:
+  desc: ''
+  sort: 74
+  value: null
+skip_memory_metrics:
+  desc: ''
+  sort: 174
+  value: 1
+sliding_window:
+  desc: ''
+  sort: 13
+  value: null
+suppress_tokens:
+  desc: ''
+  sort: 63
+  value: null
+task_specific_params:
+  desc: ''
+  sort: 76
+  value: null
+temperature:
+  desc: ''
+  sort: 47
+  value: 1.0
+tf32:
+  desc: ''
+  sort: 137
+  value: null
+tf_legacy_loss:
+  desc: ''
+  sort: 31
+  value: 0
+tie_encoder_decoder:
+  desc: ''
+  sort: 39
+  value: 0
+tie_word_embeddings:
+  desc: ''
+  sort: 33
+  value: 1
+tokenizer_class:
+  desc: ''
+  sort: 69
+  value: null
+top_k:
+  desc: ''
+  sort: 48
+  value: 50
+top_p:
+  desc: ''
+  sort: 49
+  value: 1.0
+torch_compile:
+  desc: ''
+  sort: 198
+  value: 0
+torch_compile_backend:
+  desc: ''
+  sort: 199
+  value: null
+torch_compile_mode:
+  desc: ''
+  sort: 200
+  value: null
+torch_dtype:
+  desc: ''
+  sort: 29
+  value: float16
+torch_empty_cache_steps:
+  desc: ''
+  sort: 96
+  value: null
+torchdynamo:
+  desc: ''
+  sort: 195
+  value: null
+torchscript:
+  desc: ''
+  sort: 28
+  value: 0
+tpu_metrics_debug:
+  desc: ''
+  sort: 141
+  value: 0
+tpu_num_cores:
+  desc: ''
+  sort: 140
+  value: null
+transformers_version:
+  desc: ''
+  sort: 79
+  value: 4.52.4
+typical_p:
+  desc: ''
+  sort: 50
+  value: 1.0
+use_bfloat16:
+  desc: ''
+  sort: 30
+  value: 0
+use_cache:
+  desc: ''
+  sort: 20
+  value: 1
+use_cpu:
+  desc: ''
+  sort: 125
+  value: 0
+use_ipex:
+  desc: ''
+  sort: 130
+  value: 0
+use_legacy_prediction_loop:
+  desc: ''
+  sort: 175
+  value: 0
+use_liger_kernel:
+  desc: ''
+  sort: 207
+  value: 0
+use_mps_device:
+  desc: ''
+  sort: 126
+  value: 0
+use_sliding_window:
+  desc: ''
+  sort: 12
+  value: 0
+vocab_size:
+  desc: ''
+  sort: 6
+  value: 151936
+warmup_ratio:
+  desc: ''
+  sort: 107
+  value: 0.1
+warmup_steps:
+  desc: ''
+  sort: 108
+  value: 0
+weight_decay:
+  desc: ''
+  sort: 98
+  value: 0.0
